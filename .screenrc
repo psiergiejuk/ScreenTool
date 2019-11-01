@@ -1,0 +1,15 @@
+startup_message off
+vbell off
+defscrollback 1000
+
+screen -t MC  0   mc    
+screen -t BPython    1   bpython
+screen -t Vim  2    vim .
+screen -t run   3   
+
+backtick 2 1 60 "bat"
+
+shelltitle "$ |bash"
+
+hardstatus             alwayslastline                                                                                                                          
+hardstatus string "%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%{R}[CPU:%l]%{g}%{y}[BAT:%2`]%{g}[%d/%m/%y]%{W}[%c] %{g}]"
